@@ -2,7 +2,7 @@ extends KinematicBody2D
 class_name GameEntity
 
 var velocity : Vector2 = Vector2()
-var direction : Vector2 = Vector2()
+var direction : Vector2 = Vector2(1, 0)
 var max_health : int = 100
 var current_health : int = 100
 var health_regen : int = 1

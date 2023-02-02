@@ -7,7 +7,7 @@ onready var rotater = $Rotater
 const rotate_speed = 50
 const shoot_timer_wait_time = 0.2
 const spawn_point_count = 6
-const radius = 60
+const radius = 100
 
 func _ready():	
 	var step = 2 * PI / spawn_point_count

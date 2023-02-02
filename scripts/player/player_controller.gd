@@ -5,10 +5,12 @@ const bulletPath = preload("res://scenes/bullet/bullet.tscn")
 
 func fire():
 	var gunNode = get_current_gun()
+	var children = gunNode.get_children()
 	var bullte = bulletPath.instance().init(false)
 	get_parent().add_child(bullte)
 	bullte.position = gunNode.global_position
 	bullte.velocity = direction
+	bullte.changeDirection(direction)
 	pass
 	
 func _read_input():
