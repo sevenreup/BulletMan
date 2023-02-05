@@ -19,11 +19,13 @@ var globat_cooldown = 30
 var is_busy : bool = false
 var last_ability :int = 0
 
+signal health_changed(old_value, new_value)
+
 func regen_health():
 	if (current_health < max_health):
 		if ((health_regen + current_health) > max_health):
-			current_health = max_health
-	else: current_health += health_regen
+			change_health(max_health)
+	else: change_health(current_health + health_regen)
 
 func regen_mana() :
 	if (current_mana < max_mana):
@@ -39,8 +41,10 @@ func modify_mana(amount):
 	
 func apply_damage(amount):
 	if (armor > 0): amount = amount * ((100 - amount) * .01)
-	if (current_health > amount): current_health -= amount
-	else: print("death" )
+	if (current_health > amount): change_health(current_health - amount)
+	else:
+		change_health(0)
+		health_depleted()
 	
 func _physics_process(delta):
 	last_ability += 1
@@ -53,3 +57,12 @@ func load_ability(name):
 	var sceneNode = scene.instance()
 	add_child(sceneNode)
 	return sceneNode
+	
+func change_health(amount):
+	var old_health = amount
+	current_health = amount
+	emit_signal("health_changed", old_health, current_health)
+	
+func health_depleted():
+	queue_free()
+	pass
