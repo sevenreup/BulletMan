@@ -17,17 +17,17 @@ _global_script_classes=[ {
 "base": "Area2D",
 "class": "HitBox",
 "language": "GDScript",
-"path": "res://nodes/HitBox.gd"
+"path": "res://nodes/colission_boxes/HitBox.gd"
 }, {
 "base": "Area2D",
 "class": "HurtBox",
 "language": "GDScript",
-"path": "res://nodes/HurtBox.gd"
+"path": "res://nodes/colission_boxes/HurtBox.gd"
 } ]
 _global_script_class_icons={
 "GameEntity": "",
-"HitBox": "res://nodes/HitBox.svg",
-"HurtBox": "res://nodes/HurtBox.svg"
+"HitBox": "",
+"HurtBox": ""
 }
 
 [application]

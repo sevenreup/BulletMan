@@ -1,6 +1,6 @@
 extends GameEntity
 
-const bullet_scene = preload("res://scenes/bullet/bullet.tscn")
+const bullet_scene = preload("res://entities/bullet/bullet.tscn")
 onready var shoot_timer = $ShootTimer
 onready var rotater = $Rotater
 onready var healthbar = $Healthbar

@@ -1,7 +1,7 @@
 extends GameEntity
 
 var move = load_ability("move")
-const bulletPath = preload("res://scenes/bullet/bullet.tscn")
+const bulletPath = preload("res://entities/bullet/bullet.tscn")
 
 func fire():
 	var gunNode = get_current_gun()

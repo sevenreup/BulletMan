@@ -1,6 +1,6 @@
 extends Node
 
-const bulletPath = preload("res://scenes/Bullet.tscn")
+const bulletPath = preload("res://entities/bullet/bullet.tscn")
 
 
 func fire(point = self):

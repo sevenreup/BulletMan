@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HurtBox.svg-6227fc81ce5bb11c41452a20381d83c8.stex"
+path="res://.import/HurtBox.svg-2adcee7cdb5f47f9d07a1e84d681b141.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://nodes/HurtBox.svg"
-dest_files=[ "res://.import/HurtBox.svg-6227fc81ce5bb11c41452a20381d83c8.stex" ]
+source_file="res://nodes/colission_boxes/HurtBox.svg"
+dest_files=[ "res://.import/HurtBox.svg-2adcee7cdb5f47f9d07a1e84d681b141.stex" ]
 
 [params]
 
